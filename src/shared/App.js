@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="container center">
         <Route exact path="/"
-        render={(props) => <SeahMenu {...props} linksLeft={linksLeft} linksRight={linksRight} logo={logo}/>}
+        render={(props) => <SeahMenu {...props} logo={logo}/>}
         />
         <Route path="/shop" component={Shop} />
         <Route path="/about" component={About} />
