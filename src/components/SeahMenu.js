@@ -44,7 +44,7 @@ class SeahMenu extends Component{
               <li className="menu_list_item">
                 <Link className="menu_link" to="/about">ABOUT</Link>
               </li>
-      
+
 
 
           <h1 style={{
