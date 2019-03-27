@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import 'components/ShopSubMenu.css';
 import { Link } from 'react-router-dom';
+import ImgBanner from 'components/ImgBanner.js';
+import img3 from 'components/seah_img3.png';
 
 
 
@@ -51,7 +53,8 @@ class ShopSubMenuItem extends Component {
 class ShopSubMenu extends Component {
   render () {
     return (
-      <div>
+      <div className="shopSubMenu_container">
+        <ImgBannerShop img={img3} title="WHAT'S NEW" />
         <ShopSubMenuItem menuLists = {menuList1} menuCategory = "SHOP BY STYLE"/>
         <ShopSubMenuItem menuLists = {menuList2} menuCategory = "SHOP BY FABRIC"/>
         <ShopSubMenuItem menuLists = {menuList3} menuCategory = "MORE"/>
@@ -60,5 +63,18 @@ class ShopSubMenu extends Component {
     );
   }
 }
+
+function ImgBannerShop(props) {
+  return (
+
+    <div className="img_container_shop">
+      <img src={props.img} className="img_banner_shop" />
+      <Link className="img_title_shop" to={props.title}>{props.title}</Link>
+   </div>
+
+  )
+
+}
+
 
 export default ShopSubMenu;
